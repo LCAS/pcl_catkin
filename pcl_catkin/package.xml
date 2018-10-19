@@ -9,6 +9,7 @@
 
   <buildtool_depend>catkin</buildtool_depend>
   <buildtool_depend>catkin_simple</buildtool_depend>
+  <build_depend>libqhull</build_depend>
   <build_depend>libflann-dev</build_depend>
   <build_depend>libvtk</build_depend>
   <build_depend>libusb-dev</build_depend>
