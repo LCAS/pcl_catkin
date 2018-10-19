@@ -2,6 +2,9 @@
 Changelog for package pcl_catkin_c11
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 1.8.1 (2018-10-19)
 ------------------
 * global install prefix
