@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>pcl_catkin</name>
+  <name>pcl_catkin_c11</name>
   <version>1.8.0</version>
   <description>A catkin wrapper of the Point Cloud Library (PCL).</description>
-  <maintainer email="fadri.furrer@mavt.ethz.ch">Fadri Furrer</maintainer>
+  <maintainer email="marc@hanheide.net">Marc Hanheide</maintainer>
   <author>Fadri Furrer</author>
   <license>New BSD</license>
 

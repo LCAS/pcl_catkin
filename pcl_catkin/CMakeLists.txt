@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(pcl_catkin)
+project(pcl_catkin_c11)
 
 find_package(catkin_simple REQUIRED)
 find_package(Boost REQUIRED COMPONENTS system filesystem thread)
@@ -12,7 +12,9 @@ set(PCL_CATKIN_INCLUDE ${CATKIN_DEVEL_PREFIX}/include/pcl-1.8)
 file(MAKE_DIRECTORY ${PCL_CATKIN_INCLUDE})
 
 if(NOT CMAKE_BUILD_TYPE)
-  MESSAGE(FATAL_ERROR "CMAKE_BUILD_TYPE must not be empty!")
+  MESSAGE(WARNING "CMAKE_BUILD_TYPE must not be empty, set to RelWithDebInfo!")
+  SET(CMAKE_BUILD_TYPE "RelWithDebInfo")
+
 endif()
 string(TOUPPER ${CMAKE_BUILD_TYPE} UC_BUILD_TYPE)
 
