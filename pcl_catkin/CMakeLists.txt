@@ -4,7 +4,7 @@ project(pcl_catkin_c11)
 find_package(catkin_simple REQUIRED)
 find_package(Boost REQUIRED COMPONENTS system filesystem thread)
 
-catkin_simple(ALL_DEPS_REQUIRED)
+catkin_simple()
 
 include(ExternalProject)
 
