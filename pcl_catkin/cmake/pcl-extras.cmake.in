@@ -36,18 +36,18 @@ else(WITH_VTK AND NOT ANDROID)
 endif(WITH_VTK AND NOT ANDROID)
 
 # This overrides the PCL libraries with pcl_catkin libraries. Also adds VTK libs as pcl needs them.
-file(GLOB PclLibraries @CATKIN_DEVEL_PREFIX@/lib/libpcl*)
+file(GLOB PclLibraries @CMAKE_INSTALL_PREFIX@/pcl_c11/lib/libpcl*)
 # These lines make sure that we don't export pcl_ros libraries.
-list(REMOVE_ITEM PclLibraries @CATKIN_DEVEL_PREFIX@/lib/libpcl_ros_features${CMAKE_SHARED_LIBRARY_SUFFIX})
-list(REMOVE_ITEM PclLibraries @CATKIN_DEVEL_PREFIX@/lib/libpcl_ros_filters${CMAKE_SHARED_LIBRARY_SUFFIX})
-list(REMOVE_ITEM PclLibraries @CATKIN_DEVEL_PREFIX@/lib/libpcl_ros_io${CMAKE_SHARED_LIBRARY_SUFFIX})
-list(REMOVE_ITEM PclLibraries @CATKIN_DEVEL_PREFIX@/lib/libpcl_ros_segmentation${CMAKE_SHARED_LIBRARY_SUFFIX})
-list(REMOVE_ITEM PclLibraries @CATKIN_DEVEL_PREFIX@/lib/libpcl_ros_surface${CMAKE_SHARED_LIBRARY_SUFFIX})
-list(REMOVE_ITEM PclLibraries @CATKIN_DEVEL_PREFIX@/lib/libpcl_ros_tf${CMAKE_SHARED_LIBRARY_SUFFIX})
+list(REMOVE_ITEM PclLibraries @CMAKE_INSTALL_PREFIX@/pcl_c11/lib/libpcl_ros_features${CMAKE_SHARED_LIBRARY_SUFFIX})
+list(REMOVE_ITEM PclLibraries @CMAKE_INSTALL_PREFIX@/pcl_c11/lib/libpcl_ros_filters${CMAKE_SHARED_LIBRARY_SUFFIX})
+list(REMOVE_ITEM PclLibraries @CMAKE_INSTALL_PREFIX@/pcl_c11/lib/libpcl_ros_io${CMAKE_SHARED_LIBRARY_SUFFIX})
+list(REMOVE_ITEM PclLibraries @CMAKE_INSTALL_PREFIX@/pcl_c11/lib/libpcl_ros_segmentation${CMAKE_SHARED_LIBRARY_SUFFIX})
+list(REMOVE_ITEM PclLibraries @CMAKE_INSTALL_PREFIX@/pcl_c11/lib/libpcl_ros_surface${CMAKE_SHARED_LIBRARY_SUFFIX})
+list(REMOVE_ITEM PclLibraries @CMAKE_INSTALL_PREFIX@/pcl_c11/lib/libpcl_ros_tf${CMAKE_SHARED_LIBRARY_SUFFIX})
 
 set(PCL_LIBRARIES ${PclLibraries};${VTK_LIBRARIES};@Boost_LIBRARIES@)
 set(@PROJECT_NAME@_LIBRARIES ${PclLibraries};${VTK_LIBRARIES};@Boost_LIBRARIES@)
 
 # Same thing for include dirs.
-set(PCL_INCLUDE_DIRS @CATKIN_DEVEL_PREFIX@/include/pcl-1.8;${VTK_INCLUDE_DIRS};@Boost_INCLUDE_DIRS@)
-set(@PROJECT_NAME@_INCLUDE_DIRS @CATKIN_DEVEL_PREFIX@/include/pcl-1.8;${VTK_INCLUDE_DIRS};@Boost_INCLUDE_DIRS@)
+set(PCL_INCLUDE_DIRS @CMAKE_INSTALL_PREFIX@/pcl_c11/include/pcl-1.8;${VTK_INCLUDE_DIRS};@Boost_INCLUDE_DIRS@)
+set(@PROJECT_NAME@_INCLUDE_DIRS @CMAKE_INSTALL_PREFIX@/pcl_c11/include/pcl-1.8;${VTK_INCLUDE_DIRS};@Boost_INCLUDE_DIRS@)
