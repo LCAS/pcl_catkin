@@ -12,7 +12,7 @@
   <build_depend>libqhull</build_depend>
   <build_depend>libflann-dev</build_depend>
   <build_depend>libvtk</build_depend>
-  <build_depend>libusb-dev</build_depend>
+  <build_depend>libusb-1.0-dev</build_depend>
   <build_depend>roscpp</build_depend>
   <build_depend>git</build_depend>
 
