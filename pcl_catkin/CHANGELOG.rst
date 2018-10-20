@@ -2,8 +2,8 @@
 Changelog for package pcl_catkin_c11
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.8.3 (2018-10-20)
+------------------
 * Merge pull request `#1 <https://github.com/LCAS/pcl_catkin/issues/1>`_ from LCAS/submodule
   attempt to build as subdir
 * attempt to build as subdir
